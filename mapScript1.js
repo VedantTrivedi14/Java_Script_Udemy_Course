@@ -217,3 +217,139 @@ new global();
 new object.embed.method( object );
 new arrayy[1]();
 
+console.log(10==10);
+console.log(10==100);
+console.log('hello'=='hello');
+console.log('hello'=='HELLO');
+console.log(10.5==10.5);
+console.log(10.5==10.43);
+console.log(null==null);
+console.log(undefined==undefined);
+console.log(true==true);
+console.log(false==false);
+console.log(true==false);
+console.log(NaN==NaN);
+console.log(null==undefined);
+console.log(10=='10');
+console.log('10'==10);
+console.log(null=== undefined);
+console.log(10==='10');
+
+console.log(10 !='10');
+console.log(null !=undefined);
+console.log(null!=null);
+console.log(10!=100);
+console.log(10!=='10');
+console.log(null !==undefined);
+
+console.log(10>1);
+console.log(100>10);
+console.log('hello'>'hello');
+console.log('hellooo'>'hello');
+console.log(10>=10);
+console.log(1<10);
+console.log(10<100);
+console.log('hello'<'hello');
+console.log('hello'<'hellooo');
+console.log('hello'<'Hellooo');
+console.log(10<=10);
+
+var carsLeft=1,
+    carsRight=0,
+    greenMan='no';
+
+if(greenMan='yes'){
+    console.log('cross the road');
+}else if(carsLeft===0 && carsRight===0){
+    console.log(' All Clear! cross the road');
+}else{
+    console.log(' do not cross the road');
+}
+
+var classRegister =['ved','arjun','balas'];
+
+for(var i=0;i<classRegister.length;i++){
+    console.log(classRegister[i]);
+}
+for(var i=classRegister.length-1;i>=0;i--){
+    console.log(classRegister[i]);
+}
+
+for (var i in classRegister){
+    console.log(classRegister[i]);
+}
+
+
+let letsymbol ='symbol';
+console.log(letsymbol);
+letsymbol = 'vedant';
+console.log(letsymbol);
+
+var symbolName = 'ved';
+console.log(symbolName);
+symbolName = 'trivedi'
+console.log(symbolName);
+
+const symName  = 'ved trivedi'
+console.log(symName);
+// symName = 'symbol';
+console.log(symName);
+
+
+if(true){
+
+    var symblName = 'ved';
+    let letymbol ='symbol';
+    const syName  = 'ved trivedi';
+}
+
+console.log(symblName);
+// console.log(letymbol);
+// console.log(syName);
+
+
+console.log( document.getElementsByTagName('p'));
+console.log(document.getElementById('hello'));
+console.log(document.getElementsByClassName('pClass'));
+console.log(document.querySelectorAll('#hello'));
+console.log(document.querySelectorAll('.pClass'));
+console.log(document.querySelectorAll(`p[data-content='123'],body > h1 > span `));
+var pHello = document.getElementById('hello');
+pHello.innerText +=' new world';
+pHello.innerHTML+= '<span> my world</span>';
+pHello.outerHTML='<h2 id="hello">hello world new world  my world</h2>';
+var spanh1 =document.querySelectorAll('h1 span')[0];
+spanh1.innerHTML='new text here';
+
+var element = document.getElementById('style');
+// element.style.background='blue';
+// element.style.color = 'white';
+// element.style.width='200px';
+
+element.style.cssText = 'background : blue; color : white; width : 200px';
+
+element.style.cssText += ' height : 100px';
+
+
+var ele = document.getElementById('mystyle');
+ele.style.cssText = 'background : yellow';
+getComputedStyle(ele);
+
+var select = document.getElementsByName('cars')[0];
+
+
+select.onclick = function(event ){
+    console.log(event);
+};
+function clickCallback(event){
+        console.log('licked by add event listener');
+    };
+// select.addEventListener('click', function(event){
+//     console.log('licked by add event listener');
+// });
+// select.addEventListener('click', function(event){
+//     console.log('licked by add event listener2');
+// });
+select.addEventListener('click',clickCallback);
+
+select.removeEventListener('click',clickCallback);
